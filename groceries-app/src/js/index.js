@@ -2,9 +2,9 @@ import '../css/styles.css';
 import Groceries from './groceries.js';
 
 window.addEventListener('DOMContentLoaded', () => {
-  function init() {
-    const groceriesList = document.getElementById('groceriesList');
+  const groceriesList = document.getElementById('groceriesList');
 
+  function init() {
     const groceries = Groceries.getItems();
 
     groceries.forEach((grocery) => {
@@ -20,10 +20,11 @@ window.addEventListener('DOMContentLoaded', () => {
   groceriesForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    Groceries.createItem({
+    const el = Groceries.createItem({
       name: groceriesName.value,
       quantity: groceriesQuantity.value,
     });
+    groceriesList.appendChild(el);
 
     groceriesName.value = '';
     groceriesQuantity.value = '';
