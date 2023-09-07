@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Maven Pro', sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+.app-header {
+  padding: 8px 32px;
+  background-color: white;
+  box-shadow: 0 4px 4px 0 rgb(0, 0, 0, 0.25);
+
+  position: sticky;
+  top: 0;
+
+  z-index: 99;
+}
+
+.app-header .brand-name {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: rgb(96, 110, 107);
+
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  text-decoration: none;
+
+  user-select: none;
+}
+
+.app-main__hero {
+  background-image: url(../public/images/hero-image-2.jpg);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 600px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.app-main__hero .app-main__hero__content {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 48px;
+  color: rgb(96, 110, 107);
+  background-color: white;
+  padding: 8px 16px;
+}
+
+.app-main__content {
+  max-width: 1600px;
+  margin: 16px auto;
+  padding: 16px;
+  text-align: center;
+}
+
+.app-main__content h2 {
+  display: inline-block;
+  text-align: center;
+  font-size: 24px;
+  padding: 8px;
+  color: white;
+  background-color: #859994;
+}
+
+.app-main__restaurants-list {
+  margin-top: 2rem;
+  text-align: left;
+  display: grid;
+
+  gap: 2rem 1.5rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.restaurant-item {
+  box-shadow: 0 2px 4px 0 rgb(0, 0, 0, 20%);
+  border-radius: 8px;
+
+  overflow: hidden;
+}
+
+.restaurant-item img {
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+
+  line-height: 0;
+}
+
+.restaurant-item__detail {
+  padding: 1rem;
+}
+
+.restaurant-item__detail h3 {
+  margin-bottom: 8px;
+  font-size: 24px;
+  color: #859994;
+}
+
+.restaurant-item__detail p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5;
+  display: -webkit-box;
+
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+footer {
+  padding: 24px;
+  background-color: #859994;
+
+  color: white;
+  text-align: center;
+}
+
+@media screen and (min-width: 650px) {
+  .app-main__restaurants-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .app-main__restaurants-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .app-main__restaurants-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
